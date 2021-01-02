@@ -4,4 +4,4 @@
 
 ## About
 
-Hey! Perhaps you are lost or looking for the source code of this web site. You'll find it in the adjacent repository, at the address: [github.com/tsinis/tsin.is](https://github.com/tsinis/tsin.is)
+Hey! Perhaps you are lost or looking for the source code of this web site — you'll find it in the adjacent repository, at the address: [github.com/tsinis/tsin.is](https://github.com/tsinis/tsin.is)
