@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <base href="/">
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Personal website of Roman Cinis.">
-  <meta name="keywords"
-    content="Roman Cinis, Roman Tsinis, Cinis Roman, Tsinis Roman, Tsinis, Cinis, Роман Цинис, Цинис Роман, Цинис">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="Personal website of Roman Cinis." />
+    <meta
+      name="keywords"
+      content="Roman Cinis, Roman Tsinis, Cinis Roman, Tsinis Roman, Tsinis, Cinis, Роман Цинис, Цинис Роман, Цинис"
+    />
+    <!-- CSS Style -->
+    <style>
+      html,
+      body {
+        background-color: #bdbdbd;
+      }
 
-  <style>
-    flt-glass-pane {
-      image-rendering: pixelated;
-    }
-  </style>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-  <title>Roman Cinis</title>
-</head>
-<body>
-  <script src="main.dart.js" type="application/javascript"></script>
-</body>
+      /* Fade Out Animation */
+      .loader {
+        animation-name: example;
+        animation-duration: 2s;
+      }
+      @keyframes example {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+      /* Loader Look */
+      .loading {
+        opacity: 0.1;
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: pixelated;
+        image-rendering: optimize-contrast;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+
+      flt-glass-pane {
+        image-rendering: pixelated;
+      }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Roman Cinis</title>
+  </head>
+  <body>
+    <div class="loader">
+      <img
+        src="assets/assets/images/header.gif"
+        alt="Loading..."
+        class="loading"
+      />
+    </div>
+    <script src="main.dart.js" type="application/javascript"></script>
+  </body>
 </html>
