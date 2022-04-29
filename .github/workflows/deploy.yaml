@@ -39,7 +39,7 @@ jobs:
         cp -avr build/web/* deploy/
         cp third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf deploy/assets/third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf
         cp cv/cv_tsinis.pdf deploy/cv_tsinis.pdf
-        cp CNAME deploy/CNAME
+        cp web/CNAME deploy/CNAME
         cd deploy
         rm flutter_service_worker.js
 

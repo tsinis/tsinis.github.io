@@ -1,14 +1,14 @@
+[![Deploy](https://github.com/tsinis/tsinis.github.io/actions/workflows/deploy.yaml/badge.svg)](https://github.com/tsinis/tsinis.github.io/actions/workflows/deploy.yaml)
+
 # tsin.is
 
 ![Screenshot](screenshot.gif)
 
-**Welcome to the source code repository of my personal website available at [tsin.is](https://tsin.is)**
+*Welcome to the source code repository of my personal website available at [tsin.is](https://tsin.is)*
 
-## About
+## Description
 
 You will definitely not find here fancy architecture and state management (since there is no global states at all), or advanced navigation, there is no business and therefore no business logic. It's a simple, one-page static website made in Flutter. Perhaps you will like animations or design solutions — then you are in the right place. Thank you for the visit!
-
-> **Note:**  At the moment, the website has clear scrolling problems in non-Chromium browsers (e.g. Mozilla Firefox) and on mobile Safari. The Google team is working on fixing these issues, please have patience.
 
 ## Licenses and Attributions
 
