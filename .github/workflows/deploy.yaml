@@ -1,0 +1,52 @@
+name: Deploy
+
+on:
+  push:
+    paths:
+      - "lib/**"
+      - "pubspec.yaml"
+      - "pubspec.lock"
+      - ".github/workflows/deploy.yaml"
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - name: Checks-out repository
+      uses: actions/checkout@v2
+
+    - name: Install Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: 'beta'
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Generate l10n
+      run: flutter gen-l10n
+
+    - name: Build for web
+      run: flutter build web --release
+
+    - name: Save to deploy
+      run: |
+        rm -rf deploy
+        mkdir deploy
+        cp -avr build/web/* deploy/
+        cp third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf deploy/assets/third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf
+        cp cv/cv_tsinis.pdf deploy/cv_tsinis.pdf
+        cp CNAME deploy/CNAME
+        cd deploy
+        rm flutter_service_worker.js
+
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: deploy
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

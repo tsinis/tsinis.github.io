@@ -1,0 +1,106 @@
+name: tsin.is
+description: Personal website of Roman Cinis.
+maintainer: Roman Cinis
+repository: https://github.com/tsinis/tsin.is
+
+publish_to: 'none'
+
+environment:
+  sdk: '>2.16.0'
+  flutter: '>2.12.0'
+
+dependencies:
+  auto_size_text: ^3.0.0
+  cached_network_image: ^3.2.0
+  expandable: ^5.0.1
+  flare_flutter: ^3.0.2
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  map: ^1.0.0
+  scroll_to_index: ^2.1.1
+  url_launcher: ^6.1.0
+  web_smooth_scroll: ^0.0.3
+
+dev_dependencies:
+  dart_code_metrics: ^4.14.0
+  flutter_lints: ^2.0.1
+
+flutter_intl:
+  enabled: true
+
+flutter:
+  generate: true
+  uses-material-design: false
+
+  assets:
+    - assets/images/
+    - assets/images/projects/
+
+  fonts:
+    - family: MyIcon
+      fonts:
+        - asset: third-party/fonts/Icons/MyIcon.ttf
+
+    - family: Hagrid Text
+      fonts:
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Heavy-trial.otf
+        #   weight: 900
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Heavy-Italic-trial.otf
+        #   weight: 900
+        #   style: italic
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Extrabold-trial.otf
+        #   weight: 800
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Extrabold-Italic-trial.otf
+        #   weight: 800
+        #   style: italic
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Bold-trial.otf
+        #   weight: 700
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Bold-Italic-trial.otf
+        #   weight: 700
+        #   style: italic
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Medium-trial.otf
+        #   weight: 500
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Medium-Italic-trial.otf
+        #   weight: 500
+        #   style: italic
+        - asset: third-party/fonts/Hagrid/Hagrid-Text-Regular-trial.otf
+          weight: 400
+        - asset: third-party/fonts/Hagrid/Hagrid-Text-Light-trial.otf
+          weight: 300
+        # - asset: third-party/fonts/Hagrid/Hagrid-Text-Light-Italic-trial.otf
+        #   weight: 300
+        #   style: italic
+
+    - family: Hagrid
+      fonts:
+        - asset: third-party/fonts/Hagrid/Hagrid-Heavy-trial.otf
+          weight: 900
+        # - asset: third-party/fonts/Hagrid/Hagrid-Heavy-Italic-trial.otf
+        #   weight: 900
+        #   style: italic
+        - asset: third-party/fonts/Hagrid/Hagrid-Extrabold-trial.otf
+          weight: 800
+        # - asset: third-party/fonts/Hagrid/Hagrid-Extrabold-Italic-trial.otf
+        #   weight: 800
+        #   style: italic
+        # - asset: third-party/fonts/Hagrid/Hagrid-Medium-trial.otf
+        #   weight: 500
+        # - asset: third-party/fonts/Hagrid/Hagrid-Medium-Italic-trial.otf
+        #   weight: 500
+        #   style: italic
+        - asset: third-party/fonts/Hagrid/Hagrid-Regular-trial.otf
+          weight: 400
+        # - asset: third-party/fonts/Hagrid/Hagrid-Light-trial.otf
+        #   weight: 300
+        # - asset: third-party/fonts/Hagrid/Hagrid-Light-Italic-trial.otf
+        #   weight: 300
+        #   style: italic
+        # - asset: third-party/fonts/Hagrid/Hagrid-Thin-trial.otf
+        #   weight: 100
+        # - asset: third-party/fonts/Hagrid/Hagrid-Thin-Italic-trial.otf
+        #   weight: 100
+        #   style: italic

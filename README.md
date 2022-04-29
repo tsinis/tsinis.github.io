@@ -1,7 +1,17 @@
 # tsin.is
 
-**Welcome to the repository of my personal website available at [tsin.is](https://tsin.is)**
+![Screenshot](screenshot.gif)
+
+**Welcome to the source code repository of my personal website available at [tsin.is](https://tsin.is)**
 
 ## About
 
-Hey! Perhaps you are lost or looking for the source code of this web site — you'll find it in the adjacent repository, at the address: [github.com/tsinis/tsin.is](https://github.com/tsinis/tsin.is)
+You will definitely not find here fancy architecture and state management (since there is no global states at all), or advanced navigation, there is no business and therefore no business logic. It's a simple, one-page static website made in Flutter. Perhaps you will like animations or design solutions — then you are in the right place. Thank you for the visit!
+
+> **Note:**  At the moment, the website has clear scrolling problems in non-Chromium browsers (e.g. Mozilla Firefox) and on mobile Safari. The Google team is working on fixing these issues, please have patience.
+
+## Licenses and Attributions
+
+This project is released under the terms of the [GNU Affero General Public License v3.0](./LICENSE).
+
+The font family used in the application is ["Hagrid Family"](https://www.zetafonts.com/collection/3760) by [Zetafonts](https://www.zetafonts.com) is licensed under [Creative Commons - Attribution - Non Commercial (CC BY-NC) License](./third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf).
