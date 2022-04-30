@@ -1,7 +1,7 @@
 name: tsin.is
 description: Personal website of Roman Cinis.
 maintainer: Roman Cinis
-repository: https://github.com/tsinis/tsin.is
+repository: https://github.com/tsinis/tsinis.github.io
 
 publish_to: 'none'
 
@@ -23,7 +23,6 @@ dependencies:
   map: ^1.0.0
   scroll_to_index: ^2.1.1
   url_launcher: ^6.1.0
-  web_smooth_scroll: ^0.0.3
 
 dev_dependencies:
   dart_code_metrics: ^4.14.0

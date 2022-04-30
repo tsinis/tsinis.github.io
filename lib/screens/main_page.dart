@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:web_smooth_scroll/web_smooth_scroll.dart';
 
 import '../extensions/context_extensions.dart';
 import '../themes/colors.dart';
@@ -55,17 +54,13 @@ class _MyHomePage extends StatelessWidget {
                   scrollController: _scrollController,
                   height: height,
                 ),
-                WebSmoothScroll(
+                ListView(
+                  cacheExtent: double.infinity,
                   controller: _scrollController,
-                  child: ListView(
-                    physics: const NeverScrollableScrollPhysics(),
-                    cacheExtent: double.infinity,
-                    controller: _scrollController,
-                    children: <Widget>[
-                      SizedBox(height: height),
-                      ..._taggedSections
-                    ],
-                  ),
+                  children: <Widget>[
+                    SizedBox(height: height),
+                    ..._taggedSections
+                  ],
                 ),
                 if (height > size.maxWidth)
                   const SizedBox.shrink()

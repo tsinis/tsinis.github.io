@@ -532,13 +532,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
-  web_smooth_scroll:
-    dependency: "direct main"
-    description:
-      name: web_smooth_scroll
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.3"
   win32:
     dependency: transitive
     description:
