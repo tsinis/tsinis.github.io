@@ -38,7 +38,7 @@ jobs:
         mkdir deploy
         cp -avr build/web/* deploy/
         cp third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf deploy/assets/third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf
-        cp cv/cv_tsinis.pdf deploy/cv_tsinis.pdf
+        cp assets/cv/cv_tsinis.pdf deploy/cv_tsinis.pdf
         cp web/CNAME deploy/CNAME
         cd deploy
         rm flutter_service_worker.js

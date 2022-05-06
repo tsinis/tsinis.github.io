@@ -65,6 +65,7 @@ dart_code_metrics:
     - avoid-dynamic
     - avoid-global-state
     - avoid-missing-enum-constant-in-map
+    - avoid-non-ascii-symbols
     - avoid-throw-in-catch-block
     - avoid-unnecessary-setstate
     - avoid-unnecessary-type-assertions

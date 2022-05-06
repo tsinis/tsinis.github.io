@@ -2,7 +2,7 @@
 
 # tsin.is
 
-![Screenshot](screenshot.gif)
+![Screenshot](assets/screenshot.gif)
 
 *Welcome to the source code repository of my personal website available at [tsin.is](https://tsin.is)*
 
