@@ -14,7 +14,7 @@ import '../../widgets/map_of_europe.dart';
 import '../../widgets/websites.dart';
 
 class Contact extends StatelessWidget {
-  const Contact({Key? key}) : super(key: key);
+  const Contact({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,6 @@ class Contact extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           ClipRect(
-            //WORKAROUND FOR BLENDING MODE AT 1.26.0-2.0.pre.167.
             child: SizedBox(
               width: max(size.width, 400),
               height: max(
@@ -86,13 +85,13 @@ class Contact extends StatelessWidget {
                           color: MyColors.contrastColorLight,
                         ),
                       ).moveUpOnHover(),
-                    )
+                    ),
                   ],
                 ),
                 SizedBox(height: size.height * 0.025),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

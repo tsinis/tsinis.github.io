@@ -9,8 +9,8 @@ class ScrollOffsetBuilder extends StatefulWidget {
   const ScrollOffsetBuilder({
     required this.scrollController,
     required this.builder,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<ScrollOffsetBuilder> createState() => _ScrollOffsetBuilderState();
@@ -31,12 +31,12 @@ class _ScrollOffsetBuilderState extends State<ScrollOffsetBuilder> {
     super.dispose();
   }
 
+  @override
+  Widget build(BuildContext context) => Builder(builder: _buildWithOffset);
+
   Widget _buildWithOffset(BuildContext context) =>
       widget.builder(context, _offset);
 
   void _offsetListener() =>
       setState(() => _offset = widget.scrollController.clientOffset);
-
-  @override
-  Widget build(BuildContext context) => Builder(builder: _buildWithOffset);
 }

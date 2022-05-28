@@ -5,6 +5,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart' show ValueNotifier, Offset;
 
 class HeadController implements FlareController {
+  @override
+  ValueNotifier<bool> isActive = ValueNotifier<bool>(false);
+
   bool _isHovering = false;
   bool _isPressed = false;
   late FlareAnimationLayer _exitAnimation;
@@ -14,8 +17,8 @@ class HeadController implements FlareController {
   Offset _pointer = Offset.zero;
   Mat2D _viewTransform = Mat2D();
 
-  @override
-  ValueNotifier<bool> isActive = ValueNotifier<bool>(false);
+  // ignore: avoid_setters_without_getters
+  set move(Offset offset) => _pointer = offset;
 
   @override
   bool advance(FlutterActorArtboard artboard, double elapsed) {
@@ -64,6 +67,7 @@ class HeadController implements FlareController {
 
       _headControl?.translation =
           _eyesControl!.translation = pointerCoordinates;
+
       return true;
     } else {
       if (_exitAnimation.time < _exitAnimation.animation.duration) {
@@ -71,6 +75,7 @@ class HeadController implements FlareController {
           ..time += elapsed
           ..apply(artboard);
       }
+
       return true;
     }
   }
@@ -96,9 +101,6 @@ class HeadController implements FlareController {
 
   @override
   void setViewTransform(Mat2D viewTransform) => _viewTransform = viewTransform;
-
-  // ignore: avoid_setters_without_getters
-  set move(Offset offset) => _pointer = offset;
 
   void changeHoverState(PointerEvent event) {
     if (event is PointerExitEvent) {

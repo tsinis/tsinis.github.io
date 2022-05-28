@@ -65,7 +65,6 @@ dart_code_metrics:
     - avoid-dynamic
     - avoid-global-state
     - avoid-missing-enum-constant-in-map
-    - avoid-non-ascii-symbols
     - avoid-throw-in-catch-block
     - avoid-unnecessary-setstate
     - avoid-unnecessary-type-assertions
@@ -83,15 +82,12 @@ dart_code_metrics:
     - no-equal-then-else
     - no-object-declaration
     - prefer-async-await
-    - prefer-commenting-analyzer-ignores
     - prefer-const-border-radius
     - prefer-correct-type-name
     - prefer-first
     - prefer-immediate-return
     - prefer-intl-name
     - prefer-last
-    - prefer-match-file-name
-    - prefer-moving-to-variable
     - prefer-single-widget-per-file
     - prefer-trailing-comma
     - provide-correct-intl-args
@@ -312,6 +308,8 @@ linter:
     secure_pubspec_urls: true
     sized_box_shrink_expand: true
     unnecessary_late: true
+    unnecessary_null_aware_operator_on_extension_on_nullable: true
+    unnecessary_to_list_in_spreads: true
     use_decorated_box: true
     use_late_for_private_fields_and_variables: true
     use_super_initializers: true

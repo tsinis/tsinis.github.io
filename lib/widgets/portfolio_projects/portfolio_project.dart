@@ -10,18 +10,18 @@ import '../../themes/fonts.dart';
 import 'project_button.dart';
 
 class Project extends StatefulWidget {
+  final String appURL;
+  final String pathToImage;
+  final String projectDesc;
+  final String projectName;
+
   const Project({
     required this.projectName,
     required this.projectDesc,
     required this.pathToImage,
     required this.appURL,
-    Key? key,
-  }) : super(key: key);
-
-  final String appURL;
-  final String pathToImage;
-  final String projectDesc;
-  final String projectName;
+    super.key,
+  });
 
   @override
   State<Project> createState() => _ProjectState();
@@ -39,6 +39,7 @@ class _ProjectState extends State<Project> {
   @override
   Widget build(BuildContext context) {
     final width = context.screenSize.width;
+
     return GestureDetector(
       onTap: () => setState(controller.toggle),
       child: SizedBox(
@@ -49,8 +50,11 @@ class _ProjectState extends State<Project> {
           clipBehavior: Clip.hardEdge,
           elevation: 10,
           margin: const EdgeInsets.only(top: 40),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(16),
+            ),
+          ),
           child: ExpandableNotifier(
             controller: controller,
             child: Column(
@@ -113,15 +117,13 @@ class _ProjectState extends State<Project> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: ProjectButton(
-                          widget.appURL,
-                          isWide: width > 399,
-                        ),
+                        child:
+                            ProjectButton(widget.appURL, isWide: width > 399),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 10)
+                const SizedBox(height: 10),
               ],
             ),
           ),

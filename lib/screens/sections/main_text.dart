@@ -9,14 +9,15 @@ import '../../themes/colors.dart';
 import '../../themes/fonts.dart';
 
 class MainText extends StatelessWidget {
-  const MainText(this._offset, {Key? key}) : super(key: key);
-
   final double _offset;
+
+  const MainText(this._offset, {super.key});
 
   @override
   Widget build(BuildContext context) {
     final height = context.screenSize.height;
     final shortestSide = context.screenSize.shortestSide;
+
     return Column(
       children: <Widget>[
         SizedBox(height: shortestSide / 9 - ((height < 351) ? 22 : 0)),
@@ -43,7 +44,7 @@ class MainText extends StatelessWidget {
           ),
         ),
         SizedBox(height: height / 4),
-        const Icon(MyIcon.angle_double_down, color: MyColors.backgroundColor)
+        const Icon(MyIcon.angle_double_down, color: MyColors.backgroundColor),
       ],
     );
   }

@@ -3,9 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'animation_on_hover_builder.dart';
 
 class TranslateOnHover extends StatelessWidget {
-  const TranslateOnHover({this.child, Key? key}) : super(key: key);
-
   final Widget? child;
+
+  const TranslateOnHover({this.child, super.key});
 
   @override
   Widget build(BuildContext context) => AnimationOnHoverBuilder(

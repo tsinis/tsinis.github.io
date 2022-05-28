@@ -8,11 +8,12 @@ import '../../widgets/avatar.dart';
 import '../../widgets/cv_button.dart';
 
 class About extends StatelessWidget {
-  const About({Key? key}) : super(key: key);
+  const About({super.key});
 
   @override
   Widget build(BuildContext context) {
     final isWide = context.screenSize.width > 1023.9;
+
     return FractionallySizedBox(
       widthFactor: 0.8,
       child: OrientationSwitcher(
@@ -46,7 +47,7 @@ class About extends StatelessWidget {
             width: context.screenSize.shortestSide * 0.6,
             height: context.screenSize.shortestSide * 0.6,
             child: const Avatar(),
-          )
+          ),
         ],
       ),
     );

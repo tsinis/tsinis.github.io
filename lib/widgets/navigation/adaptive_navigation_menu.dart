@@ -8,16 +8,15 @@ import '../navigation/full_navigation_menu.dart';
 import '../scroll_offset_builder.dart';
 
 class AdaptiveNavigationMenu extends StatelessWidget {
+  final BoxConstraints _size;
+  final AutoScrollController _scrollController;
+
   const AdaptiveNavigationMenu({
     required AutoScrollController scrollController,
     required BoxConstraints size,
-    Key? key,
+    super.key,
   })  : _scrollController = scrollController,
-        _size = size,
-        super(key: key);
-
-  final BoxConstraints _size;
-  final AutoScrollController _scrollController;
+        _size = size;
 
   @override
   Widget build(BuildContext context) => ScrollOffsetBuilder(
@@ -25,6 +24,7 @@ class AdaptiveNavigationMenu extends StatelessWidget {
         builder: (_, offset) {
           final isSmartPhone =
               _size.maxWidth < 646.5 || offset >= _size.maxHeight;
+
           return Padding(
             padding: EdgeInsets.only(top: 30, right: isSmartPhone ? 20 : 50),
             child: AnimatedSwitcher(

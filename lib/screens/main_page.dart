@@ -11,7 +11,7 @@ import 'constants.dart';
 import 'sections/header.dart';
 
 class MyWeb extends StatelessWidget {
-  const MyWeb({Key? key}) : super(key: key);
+  const MyWeb({super.key});
 
   @override
   Widget build(BuildContext context) => WidgetsApp(
@@ -27,6 +27,7 @@ class MyWeb extends StatelessWidget {
       );
 }
 
+// ignore: prefer-single-widget-per-file
 class _MyHomePage extends StatelessWidget {
   final _scrollController = AutoScrollController();
 
@@ -48,6 +49,7 @@ class _MyHomePage extends StatelessWidget {
         body: LayoutBuilder(
           builder: (_, size) {
             final height = size.maxHeight;
+
             return Stack(
               children: <Widget>[
                 Header(
@@ -59,7 +61,7 @@ class _MyHomePage extends StatelessWidget {
                   controller: _scrollController,
                   children: <Widget>[
                     SizedBox(height: height),
-                    ..._taggedSections
+                    ..._taggedSections,
                   ],
                 ),
                 if (height > size.maxWidth)

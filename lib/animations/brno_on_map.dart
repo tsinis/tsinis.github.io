@@ -34,7 +34,7 @@ class _PulseAnimation extends CustomPainter {
 }
 
 class Brno extends StatefulWidget {
-  const Brno({Key? key}) : super(key: key);
+  const Brno({super.key});
 
   @override
   State<Brno> createState() => _BrnoState();

@@ -10,21 +10,21 @@ import '../../themes/colors.dart';
 import '../../themes/fonts.dart';
 
 class ProjectButton extends ButtonBar {
-  const ProjectButton(this.url, {this.isWide = true, Key? key})
-      : super(key: key);
-
   final bool isWide;
-
   final String url;
 
   bool get _openSource => url.toLowerCase().contains('github');
 
+  const ProjectButton(this.url, {this.isWide = true, super.key});
+
   @override
   Widget build(BuildContext context) {
     final isSmartWatch = context.screenSize.width < 321;
+
     return Tooltip(
       textStyle: MyTextStyles.caption,
       message: url.short,
+      // ignore: avoid-wrapping-in-padding
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: MaterialButton(

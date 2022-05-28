@@ -7,9 +7,8 @@ class MenuItem extends GestureDetector {
   MenuItem({
     required String menuItem,
     required void Function() onTap,
-    Key? key,
+    super.key,
   }) : super(
-          key: key,
           onTap: onTap,
           child: MouseRegion(
             cursor: SystemMouseCursors.click,

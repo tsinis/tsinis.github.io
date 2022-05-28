@@ -5,7 +5,7 @@ class Open {
   static const String fullEmailName = 'tsinis.job@gmail.com';
   static final Uri _mail = Uri(scheme: 'mailto', path: fullEmailName);
 
-  static String get cvURL => 'tsinis.github.io/cv_tsinis.pdf';
+  static String get cvURL => 'tsin.is/cv_tsinis.pdf';
 
   static Future<void> url(String url) async =>
       launchUrl(Uri.parse('https://$url'));
@@ -13,8 +13,9 @@ class Open {
   static void openCvUrl() => url(cvURL);
 
   static Future<void> mail() async {
-    if (await canLaunchUrl(Uri.parse(_mail.toString()))) {
-      await launchUrl(Uri.parse(_mail.toString()));
+    final mail = Uri.parse(_mail.toString());
+    if (await canLaunchUrl(mail)) {
+      await launchUrl(mail);
     }
   }
 }

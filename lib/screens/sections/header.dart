@@ -9,8 +9,11 @@ class Header extends StatefulWidget {
   final double height;
   final ScrollController scrollController;
 
-  const Header({required this.scrollController, required this.height, Key? key})
-      : super(key: key);
+  const Header({
+    required this.scrollController,
+    required this.height,
+    super.key,
+  });
 
   @override
   State<Header> createState() => _HeaderState();
@@ -24,11 +27,6 @@ class _HeaderState extends State<Header> {
     super.initState();
     _showHeader();
   }
-
-  void _showHeader() => Future.delayed(
-        Duration.zero,
-        () => setState(() => isVisible = true),
-      );
 
   @override
   Widget build(BuildContext context) => AnimatedOpacity(
@@ -47,7 +45,7 @@ class _HeaderState extends State<Header> {
                 child: const AnimatedBackground(),
               ),
               Positioned(
-                top: 0.2 * widget.height,
+                top: widget.height * 0.2,
                 height: widget.height,
                 left: 0,
                 right: 0,
@@ -87,5 +85,10 @@ class _HeaderState extends State<Header> {
             ],
           ),
         ),
+      );
+
+  void _showHeader() => Future.delayed(
+        Duration.zero,
+        () => setState(() => isVisible = true),
       );
 }

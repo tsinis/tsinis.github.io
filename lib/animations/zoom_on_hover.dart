@@ -3,14 +3,10 @@ import 'package:flutter/widgets.dart';
 import 'animation_on_hover_builder.dart';
 
 class ZoomOnHover extends StatefulWidget {
-  const ZoomOnHover({
-    required this.isExpanded,
-    this.child,
-    Key? key,
-  }) : super(key: key);
-
   final Widget? child;
   final bool isExpanded;
+
+  const ZoomOnHover({required this.isExpanded, this.child, super.key});
 
   @override
   State<ZoomOnHover> createState() => _TranslateOnHoverState();
@@ -45,6 +41,7 @@ class _TranslateOnHoverState extends State<ZoomOnHover>
   @override
   Widget build(BuildContext context) {
     final animation = Tween<double>(begin: 0, end: 1).animate(animationCurve);
+
     return AnimationOnHoverBuilder(
       builder: (_, isHovering) => AnimatedBuilder(
         animation: animation,
@@ -52,6 +49,7 @@ class _TranslateOnHoverState extends State<ZoomOnHover>
           isHovering || widget.isExpanded
               ? animationController.forward()
               : animationController.reverse();
+
           return Transform.scale(
             scale: (animationCurve.value * 1.15) + 1,
             child: widget.child,

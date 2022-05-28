@@ -5,14 +5,14 @@ import '../../extensions/context_extensions.dart';
 import 'navigation_menu_list.dart';
 
 class FullNavigationMenu extends StatelessWidget {
-  const FullNavigationMenu(this._scrollController, {Key? key})
-      : super(key: key);
-
   final AutoScrollController _scrollController;
+
+  const FullNavigationMenu(this._scrollController, {super.key});
 
   @override
   Widget build(BuildContext context) {
     final size = context.screenSize;
+
     return size.width > 639
         ? NavigationMenu(_scrollController, isWide: true, height: size.height)
         : const SizedBox.shrink();

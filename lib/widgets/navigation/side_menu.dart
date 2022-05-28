@@ -8,9 +8,8 @@ import '../../themes/colors.dart';
 import 'navigation_menu_list.dart';
 
 class SideMenu extends Drawer {
-  const SideMenu(this._scrollController, {Key? key}) : super(key: key);
-
   final AutoScrollController _scrollController;
+  const SideMenu(this._scrollController, {super.key});
 
   @override
   Widget build(BuildContext context) => SizedBox(
@@ -25,13 +24,11 @@ class SideMenu extends Drawer {
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topRight,
-                    child: Padding(
+                    child: IconButton(
                       padding: const EdgeInsets.only(top: 30, right: 20),
-                      child: IconButton(
-                        icon: const Icon(MyIcon.arrow_left),
-                        color: MyColors.accentColor,
-                        onPressed: Scaffold.of(context).openDrawer,
-                      ),
+                      icon: const Icon(MyIcon.arrow_left),
+                      color: MyColors.accentColor,
+                      onPressed: Scaffold.of(context).openDrawer,
                     ),
                   ),
                   NavigationMenu(_scrollController),

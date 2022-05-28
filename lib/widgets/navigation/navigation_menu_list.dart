@@ -10,22 +10,23 @@ import '../scroll_offset_builder.dart';
 import 'navigation_menu_items.dart';
 
 class NavigationMenu extends StatelessWidget {
-  final AutoScrollController _scrollController;
   final double? height;
   final bool isWide;
+  final AutoScrollController _scrollController;
 
   const NavigationMenu(
     this._scrollController, {
     this.isWide = false,
     this.height,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) => ScrollOffsetBuilder(
         scrollController: _scrollController,
         builder: (_, offset) {
           final scaffold = Scaffold.of(context);
+
           return Opacity(
             opacity: height == null ? 1 : max(0, 1 - (offset / height!)),
             child: OrientationSwitcher(

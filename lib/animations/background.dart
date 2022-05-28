@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class AnimatedBackground extends StatelessWidget {
-  const AnimatedBackground({Key? key}) : super(key: key);
+  const AnimatedBackground({super.key});
 
   @override
   Widget build(BuildContext context) => FractionallySizedBox(

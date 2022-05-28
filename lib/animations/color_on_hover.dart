@@ -4,11 +4,10 @@ import '../themes/colors.dart';
 import 'animation_on_hover_builder.dart';
 
 class ColorOnHover extends StatelessWidget {
-  const ColorOnHover({required this.isExpanded, this.child, Key? key})
-      : super(key: key);
-
   final Widget? child;
   final bool isExpanded;
+
+  const ColorOnHover({required this.isExpanded, this.child, super.key});
 
   @override
   Widget build(BuildContext context) => AnimationOnHoverBuilder(

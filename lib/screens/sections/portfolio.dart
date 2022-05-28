@@ -7,12 +7,13 @@ import '../../themes/fonts.dart';
 import '../../widgets/portfolio_projects/portfolio_project.dart';
 
 class Portfolio extends StatelessWidget {
-  const Portfolio({Key? key}) : super(key: key);
+  const Portfolio({super.key});
 
   @override
   Widget build(BuildContext context) {
     final height = context.screenSize.height;
     final width = context.screenSize.width;
+
     return ColoredBox(
       color: MyColors.backgroundColor,
       child: FractionallySizedBox(

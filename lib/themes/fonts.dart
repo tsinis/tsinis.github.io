@@ -5,8 +5,6 @@ import 'package:flutter/widgets.dart';
 import 'colors.dart';
 
 class MyTextStyles {
-  static const String _displayFont = 'Hagrid';
-  static const String _textFont = '$_displayFont Text';
   static const TextStyle headline4 = TextStyle(
         fontFamily: _displayFont,
         fontWeight: FontWeight.w800,
@@ -49,4 +47,7 @@ class MyTextStyles {
         fontSize: 10,
         fontWeight: FontWeight.w300,
       );
+
+  static const String _displayFont = 'Hagrid';
+  static const String _textFont = '$_displayFont Text';
 }

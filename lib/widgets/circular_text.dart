@@ -6,18 +6,18 @@ import '../themes/colors.dart';
 import 'scroll_offset_builder.dart';
 
 class CircularText extends StatelessWidget {
+  final int radius;
+  final String text;
+  final TextStyle textStyle;
+  final ScrollController scrollController;
+  
   const CircularText({
     required this.scrollController,
     required this.textStyle,
     this.radius = 26,
     this.text = '· tsin.is · Roman Cinis',
-    Key? key,
-  }) : super(key: key);
-
-  final int radius;
-  final String text;
-  final TextStyle textStyle;
-  final ScrollController scrollController;
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) => ScrollOffsetBuilder(
@@ -38,8 +38,6 @@ class CircularText extends StatelessWidget {
 }
 
 class _TextPainter extends CustomPainter {
-  _TextPainter(this.radius, this.text, this.textStyle, {this.initialAngle = 0});
-
   final double initialAngle;
   final num radius;
   final String text;
@@ -47,12 +45,14 @@ class _TextPainter extends CustomPainter {
 
   final _textPainter = TextPainter(textDirection: TextDirection.ltr);
 
+  _TextPainter(this.radius, this.text, this.textStyle, {this.initialAngle = 0});
+
   @override
   void paint(Canvas canvas, Size size) {
     canvas.translate(size.width / 2, size.height / 2 - radius);
 
     if (initialAngle != 0) {
-      final d = 2.0 * radius * math.sin(initialAngle / 2);
+      final d = radius * 2 * math.sin(initialAngle / 2);
       final rotationAngle = _calculateRotationAngle(0, initialAngle);
       canvas
         ..rotate(rotationAngle)
@@ -79,7 +79,7 @@ class _TextPainter extends CustomPainter {
       ..layout(maxWidth: double.maxFinite);
 
     final d = _textPainter.width;
-    final alpha = 2 * math.asin(d / (2 * radius));
+    final alpha = 2 * math.asin(d / (radius * 2));
 
     final newAngle = _calculateRotationAngle(prevAngle, alpha);
     canvas.rotate(newAngle);
