@@ -980,6 +980,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
 analyzer
+protobuf
 
 Copyright 2013, the Dart project authors.
 
@@ -2193,7 +2194,6 @@ ansicolor
 --------------------------------------------------------------------------------
 args
 csslib
-protobuf
 
 Copyright 2013, the Dart project authors. 
 
@@ -13819,7 +13819,7 @@ map
 
 MIT License
 
-Copyright (c) 2020-2021 Mahdi K. Fard
+Copyright (c) 2020-2022 Mahdi K. Fard
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
