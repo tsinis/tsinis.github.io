@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:rive/rive.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 import '../extensions/context_extensions.dart';
+import '../services/animations_cache.dart';
 import '../themes/colors.dart';
 import '../themes/fonts.dart';
 import '../widgets/circular_text.dart';
@@ -11,7 +13,9 @@ import 'constants.dart';
 import 'sections/header.dart';
 
 class MyWeb extends StatelessWidget {
-  const MyWeb({super.key});
+  final Artboard _artboard;
+
+  const MyWeb(this._artboard, {super.key});
 
   @override
   Widget build(BuildContext context) => WidgetsApp(
@@ -23,7 +27,7 @@ class MyWeb extends StatelessWidget {
           settings: _,
           builder: __,
         ),
-        home: _MyHomePage(),
+        home: AnimationsCache(artboard: _artboard, child: _MyHomePage()),
       );
 }
 
