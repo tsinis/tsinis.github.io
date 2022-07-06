@@ -23,11 +23,11 @@ class MyWeb extends StatelessWidget {
         supportedLocales: AppLocalizations.supportedLocales,
         textStyle: MyTextStyles.bodyText1,
         color: MyColors.primaryColor,
-        pageRouteBuilder: <Null>(_, __) => MaterialPageRoute(
+        pageRouteBuilder: <Never>(_, __) => MaterialPageRoute(
           settings: _,
           builder: __,
         ),
-        home: AnimationsCache(artboard: _artboard, child: _MyHomePage()),
+        home: AnimationsCache(_artboard, child: _MyHomePage()),
       );
 }
 
