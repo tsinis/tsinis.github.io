@@ -1,7 +1,6 @@
-import 'dart:async';
-
-import 'package:flutter/gestures.dart';
-import 'package:rive/math.dart';
+import 'package:flutter/gestures.dart'
+    show Offset, PointerDeviceKind, TapDownDetails;
+import 'package:rive/math.dart' show Vec2D;
 import 'package:rive/rive.dart';
 
 /// Controller for an interactive avatar.
@@ -48,10 +47,12 @@ class RiveAvatar {
   /// and if it was touch input, move eyes/head to follow it and
   /// reset it after one second with "exit" animation.
   void onTapDown(TapDownDetails details) {
-    _pressInput?.fire();
+    _pressInput?.fire(); // Fire background animation.
+    /// If it's a touch input (typically from smartphone, tablet) - continue,
+    /// so users on those devices can enjoy a some interactivity too.
     if (details.kind == PointerDeviceKind.touch) {
-      move(details.localPosition);
-      Future.delayed(const Duration(seconds: 1), onExit);
+      move(details.localPosition); // Move head/eyes to the tap position.
+      Future.delayed(const Duration(seconds: 1), onExit); // Exit after one sec.
     }
   }
 }
