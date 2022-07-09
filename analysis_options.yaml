@@ -3,19 +3,19 @@ include: package:lints/recommended.yaml
 analyzer:
   exclude:
     # Web
-    - 'web/**'
+    - "web/**"
     # Build
-    - 'build/**'
+    - "build/**"
     # Generated code
-    - 'lib/**/*.g.dart'
-    - 'lib/generated_plugin_registrant.dart'
-    - 'lib/generated/**'
+    - "lib/**/*.g.dart"
+    - "lib/generated_plugin_registrant.dart"
+    - "lib/generated/**"
     # Assets
-    - 'assets/**'
+    - "assets/**"
     # Mocks for test
-    - '**/*.mocks.dart'
+    - "**/*.mocks.dart"
     # Coverage
-    - 'test/.test_coverage.dart'
+    - "test/.test_coverage.dart"
 
   strong-mode:
     implicit-casts: false
@@ -98,7 +98,7 @@ dart_code_metrics:
 linter:
   rules:
     # Disabled
-    always_specify_types: false  # against avoid_types_on_closure_parameters
+    always_specify_types: false # against avoid_types_on_closure_parameters
     always_use_package_imports: false # against prefer_relative_imports
     avoid_as: false # deprecated
     diagnostic_describe_all_properties: false
@@ -281,6 +281,7 @@ linter:
     avoid_type_to_string: true
     cast_nullable_to_non_nullable: true
     deprecated_consistency: true
+    discarded_futures: true
     do_not_use_environment: true
     eol_at_end_of_file: true
     exhaustive_cases: true
