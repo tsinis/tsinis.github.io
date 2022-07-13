@@ -24,7 +24,7 @@ dependencies:
     git:
       url: https://github.com/rive-app/rive-flutter
   scroll_to_index: ^3.0.1
-  url_launcher: ^6.1.4
+  url_launcher: ^6.1.5
 
 dev_dependencies:
   dart_code_metrics: ^4.16.0
