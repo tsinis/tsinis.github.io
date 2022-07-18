@@ -25,7 +25,7 @@ class MapOfEurope extends StatelessWidget {
               MyColors.canvasColor,
               BlendMode.saturation,
             ),
-            child: MapLayoutBuilder(
+            child: MapLayout(
               controller: _controller,
               builder: (_, __) => TileLayer(
                 builder: (_, x, y, z) {
