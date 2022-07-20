@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../generated/my_icons.dart';
@@ -81,7 +83,7 @@ class _WebsiteButton extends StatelessWidget {
                   ),
                 ],
               ),
-              onPressed: () => Open.url(_fullURL),
+              onPressed: () => unawaited(Open.url(_fullURL)),
             ),
           ),
         ),

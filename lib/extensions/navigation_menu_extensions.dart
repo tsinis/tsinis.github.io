@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
@@ -8,12 +10,14 @@ extension MenuExtension on Menu {
     ScaffoldState? scaffold,
     AutoScrollController scrollController,
   ) {
-    scrollController.scrollToIndex(
-      index,
-      duration: const Duration(seconds: 2),
-      preferPosition: this == Menu.contacts
-          ? AutoScrollPosition.middle
-          : AutoScrollPosition.begin,
+    unawaited(
+      scrollController.scrollToIndex(
+        index,
+        duration: const Duration(seconds: 2),
+        preferPosition: this == Menu.contacts
+            ? AutoScrollPosition.middle
+            : AutoScrollPosition.begin,
+      ),
     );
     scaffold?.openDrawer();
   }

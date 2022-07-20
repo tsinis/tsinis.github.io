@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:url_launcher/url_launcher.dart';
 
 // ignore: avoid_classes_with_only_static_members
@@ -10,7 +12,7 @@ class Open {
   static Future<void> url(String url) async =>
       launchUrl(Uri.parse('https://$url'));
 
-  static void openCvUrl() => url(cvURL);
+  static void openCvUrl() => unawaited(url(cvURL));
 
   static Future<void> mail() async {
     final mail = Uri.parse(_mail.toString());

@@ -316,3 +316,4 @@ linter:
     use_super_initializers: true
     use_enums: true
     use_colored_box: true
+    combinators_ordering: true

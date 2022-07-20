@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +38,7 @@ class ProjectButton extends ButtonBar {
           elevation: 1.5,
           hoverElevation: 2.5,
           highlightElevation: 3,
-          onPressed: () => Open.url(url),
+          onPressed: () => unawaited(Open.url(url)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: _openSource
