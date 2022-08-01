@@ -94,6 +94,10 @@ dart_code_metrics:
     - refer-correct-identifier-length
     - tag-name
     - technical-debt
+    - avoid-duplicate-exports
+    - avoid-shrink-wrap-in-lists
+    - prefer-correct-edge-insets-constructor-rule
+    - prefer-enums-by-name
 
 linter:
   rules:
@@ -105,7 +109,7 @@ linter:
     flutter_style_todos: false # for Flutter Team only
     prefer_double_quotes: false # against prefer_single_quotes
     prefer_final_parameters: false # against avoid_final_parameters
-    public_member_api_docs: false //TODO revert to true later.
+    public_member_api_docs: false # for Flutter Team only
     sort_constructors_first: false # against member-ordering-extended
     sort_unnamed_constructors_first: false # against member-ordering-extended
     unnecessary_final: false # against prefer_final_locals
