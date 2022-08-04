@@ -1,4 +1,4 @@
-[![Deploy](https://github.com/tsinis/tsinis.github.io/actions/workflows/deploy.yaml/badge.svg)](https://github.com/tsinis/tsinis.github.io/actions/workflows/deploy.yaml)
+[![deploy](https://github.com/tsinis/tsinis.github.io/actions/workflows/deploy.yaml/badge.svg)](https://github.com/tsinis/tsinis.github.io/actions/workflows/deploy.yaml)
 
 # tsin.is
 
