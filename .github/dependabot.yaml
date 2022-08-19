@@ -1,6 +1,20 @@
 version: 2
 enable-beta-ecosystems: true
 updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "dependabot"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore(deps): "
+      include: "scope"
+
+  # Maintain dependencies for Flutter
   - package-ecosystem: "pub"
     versioning-strategy: increase
     directory: "/"
@@ -8,8 +22,4 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "chore(deps): "
-      include-scope: true  
-    assignees:
-      - "dependabot"
-    reviewers:
-      - "tsinis"
+      include: "scope"
