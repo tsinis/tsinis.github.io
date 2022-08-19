@@ -8,4 +8,3 @@ updates:
       interval: "daily"
     commit_message:
       prefix: "chore"
-      include_scope: true
