@@ -17,6 +17,7 @@ class Footer extends StatelessWidget {
             crossAxisAlignment: WrapCrossAlignment.center,
             children: const <Widget>[
               Text(
+                // ignore: avoid-non-ascii-symbols
                 'All rights reserved — ©2022 Roman Cinis.',
                 textAlign: TextAlign.center,
                 style: _footerTextStyle,

@@ -13,11 +13,12 @@ class CVButton extends ButtonBar {
 
   @override
   Widget build(BuildContext context) {
-    final isSmartWatch = context.screenSize.width < 300;
+    final width = context.screenSize.width;
+    final isSmartWatch = width < 300;
 
     return Tooltip(
       textStyle: MyTextStyles.caption,
-      preferBelow: context.screenSize.width > 1439,
+      preferBelow: width > 1439,
       message: Open.cvURL,
       child: MaterialButton(
         padding: const EdgeInsets.symmetric(vertical: 5),

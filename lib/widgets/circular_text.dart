@@ -10,11 +10,12 @@ class CircularText extends StatelessWidget {
   final String text;
   final TextStyle textStyle;
   final ScrollController scrollController;
-  
+
   const CircularText({
     required this.scrollController,
     required this.textStyle,
     this.radius = 26,
+    // ignore: avoid-non-ascii-symbols
     this.text = '· tsin.is · Roman Cinis',
     super.key,
   });

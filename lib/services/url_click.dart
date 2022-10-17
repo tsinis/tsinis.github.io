@@ -9,8 +9,7 @@ class Open {
 
   static String get cvURL => 'tsin.is/cv_tsinis.pdf';
 
-  static Future<void> url(String url) async =>
-      launchUrl(Uri.parse('https://$url'));
+  static Future<void> url(String url) => launchUrl(Uri.parse('https://$url'));
 
   static void openCvUrl() => unawaited(url(cvURL));
 
