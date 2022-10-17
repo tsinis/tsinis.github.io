@@ -19,6 +19,10 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = context.screenSize;
+    final style = MyTextStyles.bodyText2.copyWith(
+      fontWeight: FontWeight.w400,
+      color: MyColors.contrastColorLight,
+    );
 
     return ColoredBox(
       color: MyColors.primaryColor,
@@ -52,10 +56,7 @@ class Contact extends StatelessWidget {
                   context.l10n.contactsDesc,
                   textAlign: TextAlign.center,
                   maxLines: 6,
-                  style: MyTextStyles.bodyText2.copyWith(
-                    fontWeight: FontWeight.w400,
-                    color: MyColors.contrastColorLight,
-                  ),
+                  style: style,
                 ),
                 SizedBox(height: size.height * 0.03),
                 const Websites(),
@@ -69,16 +70,14 @@ class Contact extends StatelessWidget {
                       context.l10n.email,
                       textAlign: TextAlign.center,
                       maxLines: 4,
-                      style: MyTextStyles.bodyText2.copyWith(
-                        fontWeight: FontWeight.w400,
-                        color: MyColors.contrastColorLight,
-                      ),
+                      style: style,
                     ),
                     Tooltip(
                       preferBelow: false,
                       message: Open.fullEmailName,
                       textStyle: MyTextStyles.caption,
                       child: const IconButton(
+                        // ignore: avoid-passing-async-when-sync-expected
                         onPressed: Open.mail,
                         icon: Icon(
                           MyIcon.mail_alt,
