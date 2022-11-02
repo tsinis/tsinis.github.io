@@ -25,6 +25,12 @@ class _ScrollOffsetBuilderState extends State<ScrollOffsetBuilder> {
     widget.scrollController.addListener(_offsetListener);
   }
 
+  Widget _buildWithOffset(BuildContext context) =>
+      widget.builder(context, _offset);
+
+  void _offsetListener() =>
+      setState(() => _offset = widget.scrollController.clientOffset);
+
   @override
   void dispose() {
     widget.scrollController.removeListener(_offsetListener);
@@ -33,10 +39,4 @@ class _ScrollOffsetBuilderState extends State<ScrollOffsetBuilder> {
 
   @override
   Widget build(BuildContext context) => Builder(builder: _buildWithOffset);
-
-  Widget _buildWithOffset(BuildContext context) =>
-      widget.builder(context, _offset);
-
-  void _offsetListener() =>
-      setState(() => _offset = widget.scrollController.clientOffset);
 }

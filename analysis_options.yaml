@@ -78,6 +78,7 @@ dart_code_metrics:
     - consistent-update-render-object
     - prefer-iterable-of
     - avoid-non-ascii-symbols
+    - avoid-cascade-after-if-null
     - prefer-commenting-analyzer-ignores: false
     - avoid-missing-enum-constant-in-map
     - avoid-throw-in-catch-block
@@ -91,7 +92,7 @@ dart_code_metrics:
     - check-unused-code
     - double-literal-format
     - format-comment
-    - member-ordering-extended
+    - member-ordering
     - newline-before-return
     - no-boolean-literal-compare
     - no-equal-then-else

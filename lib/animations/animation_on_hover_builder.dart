@@ -19,6 +19,12 @@ class AnimationOnHoverBuilder extends StatefulWidget {
 class _AnimationOnHoverBuilderState extends State<AnimationOnHoverBuilder> {
   bool _isHovering = false;
 
+  void _changeHoverState(PointerEvent event) =>
+      setState(() => _isHovering = event is PointerEnterEvent);
+
+  Widget _buildWithHovering(BuildContext context) =>
+      widget.builder(context, _isHovering);
+
   @override
   Widget build(BuildContext context) => MouseRegion(
         onEnter: _changeHoverState,
@@ -26,10 +32,4 @@ class _AnimationOnHoverBuilderState extends State<AnimationOnHoverBuilder> {
         onHover: widget.onHover,
         child: Builder(builder: _buildWithHovering),
       );
-
-  void _changeHoverState(PointerEvent event) =>
-      setState(() => _isHovering = event is PointerEnterEvent);
-
-  Widget _buildWithHovering(BuildContext context) =>
-      widget.builder(context, _isHovering);
 }
