@@ -107,7 +107,6 @@ dart_code_metrics:
     - prefer-single-widget-per-file
     - prefer-trailing-comma
     - provide-correct-intl-args
-    - refer-correct-identifier-length
     - tag-name
     - technical-debt
     - avoid-duplicate-exports
@@ -335,3 +334,7 @@ linter:
     combinators_ordering: true
     unreachable_from_main: true
     use_string_in_part_of_directives: true
+    dangling_library_doc_comments: true
+    collection_methods_unrelated_type: true
+    implicit_call_tearoffs: true
+    unnecessary_library_directive: true
