@@ -1,6 +1,6 @@
 import 'dart:math' show max;
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide MenuItem;
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 import '../../extensions/context_extensions.dart';

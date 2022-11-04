@@ -28,6 +28,11 @@ class _HeaderState extends State<Header> {
     _showHeader();
   }
 
+  void _showHeader() => Future.delayed(
+        Duration.zero,
+        () => setState(() => isVisible = true),
+      );
+
   @override
   Widget build(BuildContext context) => AnimatedOpacity(
         duration: const Duration(seconds: 1),
@@ -85,10 +90,5 @@ class _HeaderState extends State<Header> {
             ],
           ),
         ),
-      );
-
-  void _showHeader() => Future.delayed(
-        Duration.zero,
-        () => setState(() => isVisible = true),
       );
 }

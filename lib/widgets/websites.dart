@@ -15,6 +15,7 @@ class Websites extends StatelessWidget {
     'Dribbble.com/': MapEntry(MyIcon.dribbble_square, Color(0xFFea4c89)),
     'Medium.com/@': MapEntry(MyIcon.medium, MyColors.contrastColorDark),
     'Vimeo.com/': MapEntry(MyIcon.vimeo_square, Color(0xFF1ab7ea)),
+    'YouTube.com/@': MapEntry(MyIcon.youtube_square, Color(0xFFFF0000)),
     'Telegram.me/': MapEntry(MyIcon.telegram, Color(0xFF0088cc)),
     'Flare.rive.app/a/': MapEntry(MyIcon.rive, MyColors.contrastColorLight),
   };

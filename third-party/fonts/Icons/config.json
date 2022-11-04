@@ -173,6 +173,12 @@
       "css": "file-pdf",
       "code": 59395,
       "src": "fontawesome"
+    },
+    {
+      "uid": "229ff0c88750af05cfff72299772c114",
+      "css": "youtube_square",
+      "code": 62513,
+      "src": "fontawesome5"
     }
   ]
 }

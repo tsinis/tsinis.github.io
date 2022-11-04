@@ -1,10 +1,11 @@
 import 'package:flutter/widgets.dart';
 
 class OrientationSwitcher extends StatelessWidget {
-  final List<Widget> children;
-  final bool rowIfWide;
   static const MainAxisSize _min = MainAxisSize.min;
   static const MainAxisAlignment _between = MainAxisAlignment.spaceBetween;
+
+  final List<Widget> children;
+  final bool rowIfWide;
 
   const OrientationSwitcher({
     required this.children,
