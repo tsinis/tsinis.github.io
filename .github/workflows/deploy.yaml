@@ -12,27 +12,28 @@ on:
 
 jobs:
   deploy:
+    name: 🚀 Deploy website
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-    - name: Checks-out repository
+    - name: ✅ Checks-out repository
       uses: actions/checkout@v3
 
-    - name: Install Flutter
+    - name: 🦋 Install Flutter
       uses: subosito/flutter-action@v2.8.0
       with:
         channel: 'beta'
 
-    - name: Install dependencies
+    - name: 📦 Flutter Get Packages
       run: flutter pub get
 
-    - name: Generate l10n
+    - name: 🔤 Flutter Generate L10N
       run: flutter gen-l10n
 
-    - name: Build for web
+    - name: 🛠️ Build for Web
       run: flutter build web --release
 
-    - name: Save to deploy
+    - name: 💾 Save to deploy
       run: |
         rm -rf deploy
         mkdir deploy
@@ -43,7 +44,7 @@ jobs:
         cd deploy
         rm flutter_service_worker.js
 
-    - name: Deploy
+    - name: 🛫 Deploy
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
