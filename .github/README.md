@@ -2,7 +2,7 @@
 
 # tsin.is
 
-![Screenshot](assets/screenshot.gif)
+![Screenshot](../assets/screenshot.gif)
 
 *Welcome to the source code repository of my personal website available at [tsin.is](https://tsin.is)*
 
@@ -12,6 +12,6 @@ You will definitely not find here fancy architecture and state management (since
 
 ## Licenses and Attributions
 
-This project is released under the terms of the [GNU Affero General Public License v3.0](./LICENSE).
+This project is released under the terms of the [GNU Affero General Public License v3.0](../LICENSE).
 
-The font family used in the application is ["Hagrid Family"](https://www.zetafonts.com/collection/3760) by [Zetafonts](https://www.zetafonts.com) is licensed under [Creative Commons - Attribution - Non Commercial (CC BY-NC) License](./third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf).
+The font family used in the application is ["Hagrid Family"](https://www.zetafonts.com/collection/3760) by [Zetafonts](https://www.zetafonts.com) is licensed under [Creative Commons - Attribution - Non Commercial (CC BY-NC) License](../third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf).

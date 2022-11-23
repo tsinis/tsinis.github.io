@@ -1,0 +1,57 @@
+name: analyze the code
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+    branches:
+      - master
+    paths:
+      - "lib/**"
+      - "pubspec.yaml"
+      - ".github/workflows/analyze.yaml"
+
+jobs:
+  analyze:
+    name: 🕵️ Analyze Code
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: ✅ Checks-out Repository
+        uses: actions/checkout@v3
+
+      - name: 🦋 Install Flutter
+        uses: subosito/flutter-action@v2.8.0
+
+      - name: 📦 Flutter Get Packages
+        run: flutter pub get
+
+      - name: 🔤 Flutter Generate L10N
+        run: flutter gen-l10n
+
+      - name: 🔤 Verify Formatting
+        run: flutter format --set-exit-if-changed .
+
+      - name: 🔍 Flutter Analyze
+        uses: invertase/github-action-dart-analyzer@v1
+        with:
+          fatal-infos: true
+          fatal-warnings: true
+
+  auto-merge-dependabot:
+      name: 🤖 Auto merge dependabot PR
+      timeout-minutes: 10
+      needs: analyze
+      if: ${{ github.actor == 'dependabot[bot]' }}
+      runs-on: ubuntu-latest
+      permissions:
+        pull-requests: write
+        contents: write
+      steps:
+      - name: 🤖 Merge PR from dependabot
+        uses: fastify/github-action-merge-dependabot@v3.3.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}

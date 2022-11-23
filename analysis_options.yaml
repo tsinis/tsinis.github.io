@@ -65,12 +65,9 @@ dart_code_metrics:
     - avoid-dynamic
     - avoid-global-state
     - avoid-top-level-members-in-tests
-    - avoid-use-expanded-as-spacer
     - avoid-banned-imports
-    - include-methods
     - avoid-passing-async-when-sync-expected
     - check-for-equals-in-render-object-setters
-    - avoid-non-null-assertions
     - avoid-redundant-async
     - prefer-moving-to-variable
     - missing-test-assertion
@@ -89,7 +86,6 @@ dart_code_metrics:
     - avoid-wrapping-in-padding
     - ban-name
     - binary-expression-operand-order
-    - check-unused-code
     - double-literal-format
     - format-comment
     - member-ordering
@@ -108,11 +104,7 @@ dart_code_metrics:
     - prefer-trailing-comma
     - provide-correct-intl-args
     - tag-name
-    - technical-debt
-    - avoid-duplicate-exports
     - avoid-shrink-wrap-in-lists
-    - prefer-correct-edge-insets-constructor-rule
-    - prefer-enums-by-name
 
 linter:
   rules:
@@ -127,6 +119,7 @@ linter:
     sort_constructors_first: false # against member-ordering-extended
     sort_unnamed_constructors_first: false # against member-ordering-extended
     unnecessary_final: false # against prefer_final_locals
+    package_names: false  # it is a web site so it has a dot in the name
 
     # Enabled
     always_put_control_body_on_new_line: true
@@ -173,7 +166,6 @@ linter:
     omit_local_variable_types: true
     only_throw_errors: true
     overridden_fields: true
-    package_names: true
     package_prefixed_library_names: true
     parameter_assignments: true
     prefer_asserts_in_initializer_lists: true
@@ -334,7 +326,7 @@ linter:
     combinators_ordering: true
     unreachable_from_main: true
     use_string_in_part_of_directives: true
-    dangling_library_doc_comments: true
-    collection_methods_unrelated_type: true
-    implicit_call_tearoffs: true
-    unnecessary_library_directive: true
+    # dangling_library_doc_comments: true
+    # collection_methods_unrelated_type: true
+    # implicit_call_tearoffs: true
+    # unnecessary_library_directive: true

@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/MyIcon.ttf
 ///
-/// 
+///
 /// * Font Awesome 4, Copyright (C) 2016 by Dave Gandy
 ///         Author:    Dave Gandy
 ///         License:   SIL ()
@@ -29,29 +29,54 @@ class MyIcon {
   static const _kFontFam = 'MyIcon';
   static const String? _kFontPkg = null;
 
-  static const IconData rive = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData codepen = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData telegram = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData file_pdf = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData heart = IconData(0xf004, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData arrow_left = IconData(0xf060, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData linkedin = IconData(0xf08c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData github_square = IconData(0xf092, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData github = IconData(0xf09b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData docs = IconData(0xf0c5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData menu = IconData(0xf0c9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData caret_down = IconData(0xf0d7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData caret_up = IconData(0xf0d8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData mail_alt = IconData(0xf0e0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData angle_double_down = IconData(0xf103, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData dribbble = IconData(0xf17d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData vimeo_square = IconData(0xf194, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData medium = IconData(0xf23a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData vimeo_v = IconData(0xf27d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData app_store = IconData(0xf36f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData app_store_ios = IconData(0xf370, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData dribbble_square = IconData(0xf397, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData google_play = IconData(0xf3ab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData youtube_square = IconData(0xf431, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData globe_europe = IconData(0xf7a2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData rive =
+      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData codepen =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData telegram =
+      IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData file_pdf =
+      IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData heart =
+      IconData(0xf004, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData arrow_left =
+      IconData(0xf060, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData linkedin =
+      IconData(0xf08c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData github_square =
+      IconData(0xf092, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData github =
+      IconData(0xf09b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData docs =
+      IconData(0xf0c5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData menu =
+      IconData(0xf0c9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData caret_down =
+      IconData(0xf0d7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData caret_up =
+      IconData(0xf0d8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData mail_alt =
+      IconData(0xf0e0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData angle_double_down =
+      IconData(0xf103, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData dribbble =
+      IconData(0xf17d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData vimeo_square =
+      IconData(0xf194, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData medium =
+      IconData(0xf23a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData vimeo_v =
+      IconData(0xf27d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData app_store =
+      IconData(0xf36f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData app_store_ios =
+      IconData(0xf370, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData dribbble_square =
+      IconData(0xf397, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData google_play =
+      IconData(0xf3ab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData youtube_square =
+      IconData(0xf431, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData globe_europe =
+      IconData(0xf7a2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

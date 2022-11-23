@@ -22,21 +22,21 @@ class _ScrollOffsetBuilderState extends State<ScrollOffsetBuilder> {
   @override
   void initState() {
     super.initState();
-    widget.scrollController.addListener(_offsetListener);
+    widget.scrollController.addListener(offsetListener);
   }
-
-  Widget _buildWithOffset(BuildContext context) =>
-      widget.builder(context, _offset);
-
-  void _offsetListener() =>
-      setState(() => _offset = widget.scrollController.clientOffset);
 
   @override
   void dispose() {
-    widget.scrollController.removeListener(_offsetListener);
+    widget.scrollController.removeListener(offsetListener);
     super.dispose();
   }
 
+  Widget buildWithOffset(BuildContext context) =>
+      widget.builder(context, _offset);
+
+  void offsetListener() =>
+      setState(() => _offset = widget.scrollController.clientOffset);
+
   @override
-  Widget build(BuildContext context) => Builder(builder: _buildWithOffset);
+  Widget build(BuildContext context) => Builder(builder: buildWithOffset);
 }
