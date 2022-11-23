@@ -24,7 +24,9 @@ class RiveAvatar {
       RiveFile.asset('assets/images/avatar.riv');
 
   RiveAvatar(Artboard? artboard) {
-    if (artboard == null) throw Exception('No artboards cached!');
+    if (artboard == null) {
+      throw Exception('No artboards cached!');
+    }
     _artboard = artboard;
 
     /// To find proper artboard there is also _artboard.stateMachines list,

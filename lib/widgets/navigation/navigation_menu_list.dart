@@ -1,5 +1,6 @@
 import 'dart:math' show max;
 
+// ignore: undefined_hidden_name
 import 'package:flutter/material.dart' hide MenuItem;
 import 'package:scroll_to_index/scroll_to_index.dart';
 
