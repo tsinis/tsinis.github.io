@@ -64,10 +64,10 @@ class Portfolio extends StatelessWidget {
                   appURL: 'github.com/tsinis/colors_ai',
                 ),
                 Project(
-                  projectName: context.l10n.planetBGame,
-                  pathToImage: 'assets/images/projects/planet.jpg',
-                  projectDesc: context.l10n.planetBGameDesc,
-                  appURL: 'github.com/tsinis/plan_et_b',
+                  projectName: 'Steampunk Flutter Clock',
+                  pathToImage: 'assets/images/projects/clock.jpg',
+                  projectDesc: context.l10n.flutterClock,
+                  appURL: 'github.com/tsinis/flutter_clock',
                 ),
               ],
             ),
@@ -75,10 +75,10 @@ class Portfolio extends StatelessWidget {
               spacing: width * 0.025,
               children: [
                 Project(
-                  projectName: 'Steampunk Flutter Clock',
-                  pathToImage: 'assets/images/projects/clock.jpg',
-                  projectDesc: context.l10n.flutterClock,
-                  appURL: 'github.com/tsinis/flutter_clock',
+                  projectName: context.l10n.planetBGame,
+                  pathToImage: 'assets/images/projects/planet.jpg',
+                  projectDesc: context.l10n.planetBGameDesc,
+                  appURL: 'github.com/tsinis/plan_et_b',
                 ),
                 Project(
                   projectName: 'IKEM Online',
