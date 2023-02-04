@@ -41,6 +41,16 @@ jobs:
           fatal-infos: true
           fatal-warnings: true
 
+      - name: Dart Code Metrics
+        uses: dart-code-checker/dart-code-metrics-action@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pull_request_comment: true
+          check_unused_files: true
+          fatal_performance: true
+          fatal_warnings: true
+          fatal_style: true
+
   auto-merge-dependabot:
       name: 🤖 Auto merge dependabot PR
       timeout-minutes: 10

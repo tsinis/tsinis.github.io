@@ -7,7 +7,7 @@ enum Menu { about, portfolio, contacts }
 
 extension MenuExtension on Menu {
   void scrollTo(
-    ScaffoldState? scaffold,
+    ScaffoldState scaffold,
     AutoScrollController scrollController,
   ) {
     unawaited(
@@ -19,6 +19,6 @@ extension MenuExtension on Menu {
             : AutoScrollPosition.begin,
       ),
     );
-    scaffold?.openDrawer();
+    scaffold.openDrawer();
   }
 }
