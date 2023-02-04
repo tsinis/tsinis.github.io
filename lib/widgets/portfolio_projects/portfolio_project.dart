@@ -66,9 +66,11 @@ class _ProjectState extends State<Project> {
                   elevation: 0,
                   margin: const EdgeInsets.only(bottom: 10),
                   shape: const RoundedRectangleBorder(),
-                  child: Image.asset(widget.pathToImage)
-                      .zoomInOnHover(isExpanded: controller.expanded)
-                      .colorOnHover(isExpanded: controller.expanded),
+                  child: RepaintBoundary(
+                    child: Image.asset(widget.pathToImage)
+                        .zoomInOnHover(isExpanded: controller.expanded)
+                        .colorOnHover(isExpanded: controller.expanded),
+                  ),
                 ),
                 ExpandablePanel(
                   collapsed: const SizedBox(),

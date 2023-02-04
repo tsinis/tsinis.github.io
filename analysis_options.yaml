@@ -59,52 +59,64 @@ dart_code_metrics:
   rules:
     - avoid-nested-conditional-expressions:
       acceptable-level: 1
-    - always-remove-listener
-    - avoid-border-all
-    - avoid-collection-methods-with-unrelated-types
-    - avoid-dynamic
-    - avoid-global-state
-    - avoid-top-level-members-in-tests
-    - avoid-banned-imports
-    - avoid-passing-async-when-sync-expected
-    - check-for-equals-in-render-object-setters
-    - avoid-redundant-async
-    - prefer-moving-to-variable
-    - missing-test-assertion
-    - prefer-correct-test-file-name
-    - consistent-update-render-object
-    - prefer-iterable-of
-    - avoid-non-ascii-symbols
-    - avoid-cascade-after-if-null
+    - always-remove-listener: true
+    - avoid-banned-imports: true
+    - avoid-border-all: true
+    - avoid-cascade-after-if-null: true
+    - avoid-collection-methods-with-unrelated-types: true
+    - avoid-double-slash-imports: true
+    - avoid-duplicate-exports: true
+    - avoid-dynamic: true
+    - avoid-expanded-as-spacer: true
+    - avoid-global-state: true
+    - avoid-missing-enum-constant-in-map: true
+    - avoid-non-ascii-symbols: true
+    - avoid-non-null-assertion: true
+    - avoid-returning-widgets: true
+    - avoid-shrink-wrap-in-lists: true
+    - avoid-throw-in-catch-block: true
+    - avoid-unnecessary-conditionals: true
+    - avoid-unnecessary-setstate: true
+    - avoid-unnecessary-type-assertions: true
+    - avoid-unnecessary-type-casts: true
+    - avoid-unrelated-type-assertions: true
+    - avoid-unused-parameters: true
+    - avoid-wrapping-in-padding: true
+    - ban-name: true
+    - binary-expression-operand-order: true
+    - check-for-equals-in-render-object-setters: true
+    - consistent-update-render-object: true
+    - double-literal-format: true
+    - format-comment: true
+    - member-ordering: true
+    - newline-before-return: true
+    - no-boolean-literal-compare: true
+    - no-empty-block: true
+    - no-equal-then-else: true
+    - no-object-declaration: true
+    - prefer-async-await: true
+    - prefer-conditional-expressions: true
+    - prefer-const-border-radius: true
+    - prefer-correct-edge-insets-constructor: true
+    - prefer-correct-test-file-name: true
+    - prefer-correct-type-name: true
+    - prefer-enums-by-name: true
+    - prefer-extracting-callbacks: true
+    - prefer-first: true
+    - prefer-immediate-return: true
+    - prefer-intl-name: true
+    - prefer-iterable-of: true
+    - prefer-last: true
+    - prefer-moving-to-variable: true
+    - prefer-provide-intl-description: true
+    - prefer-single-widget-per-file: true
+    - prefer-trailing-comma: true
+    - prefer-using-list-view: true
+    - provide-correct-intl-args: true
+    - tag-name: true
+    - use-setstate-synchronously: true
     - prefer-commenting-analyzer-ignores: false
-    - avoid-missing-enum-constant-in-map
-    - avoid-throw-in-catch-block
-    - avoid-unnecessary-setstate
-    - avoid-unnecessary-type-assertions
-    - avoid-unrelated-type-assertions
-    - avoid-unused-parameters
-    - avoid-wrapping-in-padding
-    - ban-name
-    - binary-expression-operand-order
-    - double-literal-format
-    - format-comment
-    - member-ordering
-    - newline-before-return
-    - no-boolean-literal-compare
-    - no-equal-then-else
-    - no-object-declaration
-    - prefer-async-await
-    - prefer-const-border-radius
-    - prefer-correct-type-name
-    - prefer-first
-    - prefer-immediate-return
-    - prefer-intl-name
-    - prefer-last
-    - prefer-single-widget-per-file
-    - prefer-trailing-comma
-    - provide-correct-intl-args
-    - tag-name
-    - avoid-shrink-wrap-in-lists
+    - prefer-match-file-name: false
 
 linter:
   rules:
@@ -139,7 +151,6 @@ linter:
     avoid_returning_null_for_void: true
     avoid_single_cascade_in_expression_statements: true
     avoid_slow_async_io: true
-    avoid_types_on_closure_parameters: true
     avoid_unnecessary_containers: true
     avoid_unused_constructor_parameters: true
     avoid_void_async: true
@@ -150,28 +161,24 @@ linter:
     close_sinks: true
     comment_references: true
     control_flow_in_finally: true
-    depend_on_referenced_packages: true
     empty_statements: true
     iterable_contains_unrelated_type: true
     join_return_with_assignment: true
     leading_newlines_in_multiline_strings: true
-    library_private_types_in_public_api: true
-    lines_longer_than_80_chars: true
     list_remove_unrelated_type: true
     literal_only_boolean_expressions: true
     missing_whitespace_between_adjacent_strings: true
     no_adjacent_strings_in_list: true
     no_logic_in_create_state: true
     no_runtimeType_toString: true
-    omit_local_variable_types: true
     only_throw_errors: true
     overridden_fields: true
     package_prefixed_library_names: true
     parameter_assignments: true
     prefer_asserts_in_initializer_lists: true
     prefer_asserts_with_message: true
-    prefer_const_constructors: true
     prefer_const_constructors_in_immutables: true
+    prefer_const_constructors: true
     prefer_const_declarations: true
     prefer_const_literals_to_create_immutables: true
     prefer_constructors_over_static_methods: true
@@ -254,7 +261,6 @@ linter:
     use_rethrow_when_possible: true
 
     # Effective_dart 1.2.0
-    avoid_catches_without_on_clauses: true
     avoid_catching_errors: true
     avoid_equals_and_hash_code_on_mutable_classes: true
     avoid_function_literals_in_foreach_calls: true
@@ -290,7 +296,6 @@ linter:
     avoid_type_to_string: true
     cast_nullable_to_non_nullable: true
     deprecated_consistency: true
-    discarded_futures: true
     do_not_use_environment: true
     eol_at_end_of_file: true
     exhaustive_cases: true
@@ -311,7 +316,9 @@ linter:
 
     # Linter 1.15.0+
     avoid_final_parameters: true
+    combinators_ordering: true
     conditional_uri_does_not_exist: true
+    discarded_futures: true
     no_leading_underscores_for_library_prefixes: true
     no_leading_underscores_for_local_identifiers: true
     secure_pubspec_urls: true
@@ -319,14 +326,15 @@ linter:
     unnecessary_late: true
     unnecessary_null_aware_operator_on_extension_on_nullable: true
     unnecessary_to_list_in_spreads: true
+    unreachable_from_main: true
     use_decorated_box: true
     use_late_for_private_fields_and_variables: true
-    use_enums: true
-    use_colored_box: true
-    combinators_ordering: true
-    unreachable_from_main: true
     use_string_in_part_of_directives: true
-    # dangling_library_doc_comments: true
-    # collection_methods_unrelated_type: true
-    # implicit_call_tearoffs: true
-    # unnecessary_library_directive: true
+
+    # Linter 1.30.0+
+    collection_methods_unrelated_type: true
+    dangling_library_doc_comments: true
+    enable_null_safety: true
+    implicit_call_tearoffs: true
+    library_annotations: true
+    unnecessary_library_directive: true

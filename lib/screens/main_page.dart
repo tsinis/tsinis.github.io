@@ -35,6 +35,7 @@ class MyWeb extends StatelessWidget {
 class _MyHomePage extends StatelessWidget {
   final _scrollController = AutoScrollController();
 
+  // ignore: avoid-returning-widgets
   Iterable<Widget> get _taggedSections => List.generate(
         sections.length,
         (i) => AutoScrollTag(
@@ -74,9 +75,11 @@ class _MyHomePage extends StatelessWidget {
                   Positioned(
                     left: 80,
                     bottom: 80,
-                    child: CircularText(
-                      textStyle: MyTextStyles.overline,
-                      scrollController: _scrollController,
+                    child: RepaintBoundary(
+                      child: CircularText(
+                        textStyle: MyTextStyles.overline,
+                        scrollController: _scrollController,
+                      ),
                     ),
                   ),
                 Positioned(

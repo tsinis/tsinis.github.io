@@ -29,6 +29,7 @@ class NavigationMenu extends StatelessWidget {
           final scaffold = Scaffold.of(context);
 
           return Opacity(
+            // ignore: avoid-non-null-assertion, it's not a getter.
             opacity: height == null ? 1 : max(0, 1 - (offset / height!)),
             child: OrientationSwitcher(
               rowIfWide: isWide,

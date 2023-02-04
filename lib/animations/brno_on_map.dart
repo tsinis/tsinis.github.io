@@ -62,8 +62,10 @@ class _BrnoState extends State<Brno> with SingleTickerProviderStateMixin {
     ..repeat(period: const Duration(seconds: 3));
 
   @override
-  Widget build(BuildContext context) => CustomPaint(
-        painter: _PulseAnimation(controller),
-        child: const SizedBox(width: 4.2),
+  Widget build(BuildContext context) => RepaintBoundary(
+        child: CustomPaint(
+          painter: _PulseAnimation(controller),
+          child: const SizedBox(width: 4.2),
+        ),
       );
 }
