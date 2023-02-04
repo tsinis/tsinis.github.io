@@ -26,10 +26,12 @@ class _AnimationOnHoverBuilderState extends State<AnimationOnHoverBuilder> {
       widget.builder(context, _isHovering);
 
   @override
-  Widget build(BuildContext context) => MouseRegion(
-        onEnter: _changeHoverState,
-        onExit: _changeHoverState,
-        onHover: widget.onHover,
-        child: Builder(builder: _buildWithHovering),
+  Widget build(BuildContext context) => RepaintBoundary(
+        child: MouseRegion(
+          onEnter: _changeHoverState,
+          onExit: _changeHoverState,
+          onHover: widget.onHover,
+          child: Builder(builder: _buildWithHovering),
+        ),
       );
 }

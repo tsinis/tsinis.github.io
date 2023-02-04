@@ -6,8 +6,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    assignees:
-      - "dependabot"
     reviewers:
       - "tsinis"
     commit-message:
@@ -20,6 +18,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    reviewers:
+      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"

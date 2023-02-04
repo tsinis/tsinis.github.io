@@ -8,10 +8,12 @@ class AnimatedBackground extends StatelessWidget {
         widthFactor: 0.9,
         child: Opacity(
           opacity: 0.1,
-          child: Image.asset(
-            'assets/images/header.gif',
-            fit: BoxFit.fill,
-            filterQuality: FilterQuality.none,
+          child: RepaintBoundary(
+            child: Image.asset(
+              'assets/images/header.gif',
+              fit: BoxFit.fill,
+              filterQuality: FilterQuality.none,
+            ),
           ),
         ),
       );

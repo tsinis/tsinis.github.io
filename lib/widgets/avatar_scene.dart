@@ -28,7 +28,12 @@ class AvatarScene extends StatelessWidget {
               onExit: (_) => _avatar.onExit(),
               onHover: (event) => _avatar.move(event.localPosition),
               // The useArtboardSize is important for accurate pointer position.
-              child: Rive(artboard: _avatar.artboard, useArtboardSize: true),
+              child: RepaintBoundary(
+                child: Rive(
+                  artboard: _avatar.artboard,
+                  useArtboardSize: true,
+                ),
+              ),
             ),
           ),
         ),
