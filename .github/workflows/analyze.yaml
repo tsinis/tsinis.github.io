@@ -34,7 +34,7 @@ jobs:
         run: flutter gen-l10n
 
       - name: 🔤 Verify Formatting
-        run: flutter format --set-exit-if-changed .
+        run: dart format --set-exit-if-changed .
 
       - name: 🔍 Flutter Analyze
         uses: invertase/github-action-dart-analyzer@v1
