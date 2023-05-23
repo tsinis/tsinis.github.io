@@ -6,8 +6,8 @@ repository: https://github.com/tsinis/tsinis.github.io
 publish_to: "none"
 
 environment:
-  sdk: ">=2.18.0"
-  flutter: ">=3.3.0"
+  sdk: ">=3.0.0"
+  flutter: ">=3.10.0"
 
 dependencies:
   auto_size_text: ^3.0.0
@@ -20,12 +20,12 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   map: ^1.4.1
-  rive: ^0.10.4
+  rive: ^0.11.1
   scroll_to_index: ^3.0.1
   url_launcher: ^6.1.11
 
 dev_dependencies:
-  dart_code_metrics: ^5.7.3
+  dart_code_metrics: ^5.7.4
   flutter_lints: ^2.0.1
   linter: ^1.30.0
 

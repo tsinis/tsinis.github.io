@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
 
 class AnimationOnHoverBuilder extends StatefulWidget {
+  // ignore: avoid_positional_boolean_parameters, it's builder.
   final Widget Function(BuildContext context, bool isHovering) builder;
   final void Function(PointerHoverEvent)? onHover;
 
