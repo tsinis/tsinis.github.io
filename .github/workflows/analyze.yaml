@@ -43,7 +43,7 @@ jobs:
           fatal-warnings: true
 
       - name: Dart Code Metrics
-        uses: dart-code-checker/dart-code-metrics-action@v3
+        uses: dart-code-checker/dart-code-metrics-action@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pull_request_comment: true

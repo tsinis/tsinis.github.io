@@ -8,14 +8,14 @@ class Footer extends StatelessWidget {
   const Footer({super.key});
 
   @override
-  Widget build(BuildContext context) => DecoratedBox(
-        decoration: const BoxDecoration(color: Color(0xFFFFD54F)),
+  Widget build(BuildContext context) => const DecoratedBox(
+        decoration: BoxDecoration(color: Color(0xFFFFD54F)),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 5),
+          padding: EdgeInsets.symmetric(vertical: 5),
           child: Wrap(
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
-            children: const <Widget>[
+            children: <Widget>[
               Text(
                 // ignore: avoid-non-ascii-symbols
                 'All rights reserved — ©2022 Roman Cinis.',
