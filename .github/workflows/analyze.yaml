@@ -31,7 +31,7 @@ jobs:
         run: flutter pub get
 
       - name: 🔤 Flutter Generate L10N
-        run: flutter gen-l10n
+        run: flutter gen-l10n --no-nullable-getter
 
       - name: 🔤 Verify Formatting
         run: dart format --set-exit-if-changed .
@@ -63,6 +63,6 @@ jobs:
         contents: write
       steps:
       - name: 🤖 Merge PR from dependabot
-        uses: fastify/github-action-merge-dependabot@v3.7.0
+        uses: fastify/github-action-merge-dependabot@v3.8.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
