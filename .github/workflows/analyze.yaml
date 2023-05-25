@@ -31,7 +31,7 @@ jobs:
         run: flutter pub get
 
       - name: 🔤 Flutter Generate L10N
-        run: flutter gen-l10n
+        run: flutter gen-l10n --no-nullable-getter
 
       - name: 🔤 Verify Formatting
         run: dart format --set-exit-if-changed .
