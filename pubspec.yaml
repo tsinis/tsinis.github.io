@@ -25,7 +25,7 @@ dependencies:
   url_launcher: ^6.1.12
 
 dev_dependencies:
-  dart_code_metrics: ^5.7.5
+  dart_code_metrics: ^5.7.6
   flutter_lints: ^2.0.2
   linter: ^1.30.0
 
