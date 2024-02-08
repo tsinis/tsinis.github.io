@@ -19,7 +19,7 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  map: ^1.4.2
+  map: ^2.0.0+1
   rive: ^0.12.4
   scroll_to_index: ^3.0.1
   url_launcher: ^6.2.4
