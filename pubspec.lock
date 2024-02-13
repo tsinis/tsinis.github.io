@@ -268,10 +268,10 @@ packages:
     dependency: transitive
     description:
       name: latlng
-      sha256: cbc68be333d6dd4a152190066d0987737a6f04f0e31e670c31bf8cc7219c3a96
+      sha256: cd598d846dab813b39087aee3e5fa88c4bd543c652a981b62e9670fdfa8afd8f
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "2.0.5"
   linter:
     dependency: "direct dev"
     description:
@@ -292,10 +292,10 @@ packages:
     dependency: "direct main"
     description:
       name: map
-      sha256: dc1975a42304a91b4ab3fc7f064f554f18be0fbefb5bcd4ae95d1c087508a893
+      sha256: "1343b0168f62098525703cbd9ef8351acd2c87c7fa2b34f22d3d1b839e24769d"
       url: "https://pub.dev"
     source: hosted
-    version: "1.4.2"
+    version: "2.0.2"
   material_color_utilities:
     dependency: transitive
     description:
