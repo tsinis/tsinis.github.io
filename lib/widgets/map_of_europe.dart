@@ -9,7 +9,7 @@ import '../themes/colors.dart';
 
 class MapOfEurope extends StatelessWidget {
   static final MapController _controller = MapController(
-    location: const LatLng(49.18, 16.56),
+    location: const LatLng(Angle.degree(49.18), Angle.degree(16.56)),
     zoom: 5,
   );
 
