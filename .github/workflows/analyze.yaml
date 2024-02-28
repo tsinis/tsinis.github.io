@@ -37,7 +37,7 @@ jobs:
         run: dart format --set-exit-if-changed .
 
       - name: 🔍 Flutter Analyze
-        uses: invertase/github-action-dart-analyzer@v1
+        uses: invertase/github-action-dart-analyzer@v3
         with:
           fatal-infos: true
           fatal-warnings: true
