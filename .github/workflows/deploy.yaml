@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 5
     steps:
     - name: ✅ Checks-out repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4.1.1
 
     - name: 🦋 Install Flutter
       uses: subosito/flutter-action@v2.12.0
@@ -45,7 +45,7 @@ jobs:
         rm flutter_service_worker.js
 
     - name: 🛫 Deploy
-      uses: s0/git-publish-subdir-action@develop
+      uses: s0/git-publish-subdir-action@v2.6.0
       env:
         REPO: self
         BRANCH: gh-pages

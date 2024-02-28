@@ -22,10 +22,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: ✅ Checks-out Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.1
 
       - name: 🦋 Install Flutter
         uses: subosito/flutter-action@v2.12.0
+        with:
+          channel: 'beta'
 
       - name: 📦 Flutter Get Packages
         run: flutter pub get
@@ -37,7 +39,7 @@ jobs:
         run: dart format --set-exit-if-changed .
 
       - name: 🔍 Flutter Analyze
-        uses: invertase/github-action-dart-analyzer@v1
+        uses: invertase/github-action-dart-analyzer@v3
         with:
           fatal-infos: true
           fatal-warnings: true

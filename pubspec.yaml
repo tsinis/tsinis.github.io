@@ -22,7 +22,7 @@ dependencies:
   map: ^2.0.2
   rive: ^0.12.4
   scroll_to_index: ^3.0.1
-  url_launcher: ^6.2.4
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   dart_code_metrics: ^5.7.6
