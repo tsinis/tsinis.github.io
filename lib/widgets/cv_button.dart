@@ -8,6 +8,7 @@ import '../themes/button_style.dart';
 import '../themes/colors.dart';
 import '../themes/fonts.dart';
 
+// ignore: deprecated_member_use, TODO!
 class CVButton extends ButtonBar {
   const CVButton({super.key});
 
