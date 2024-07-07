@@ -23,9 +23,9 @@ class MyWeb extends StatelessWidget {
         supportedLocales: AppLocalizations.supportedLocales,
         textStyle: MyTextStyles.bodyText1,
         color: MyColors.primaryColor,
-        pageRouteBuilder: <Never>(_, __) => MaterialPageRoute(
-          settings: _,
-          builder: __,
+        pageRouteBuilder: <Never>(settings, builder) => MaterialPageRoute(
+          settings: settings,
+          builder: builder,
         ),
         home: AnimationsCache(_artboard, child: _MyHomePage()),
       );
