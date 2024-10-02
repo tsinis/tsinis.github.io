@@ -11,7 +11,7 @@ environment:
 
 dependencies:
   auto_size_text: ^3.0.0
-  cached_network_image: ^3.3.1
+  cached_network_image: ^3.4.1
   expandable: ^5.0.1
   flutter:
     sdk: flutter
@@ -20,14 +20,13 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   map: ^2.0.2
-  rive: ^0.13.13
+  rive: ^0.13.14
   scroll_to_index: ^3.0.1
   url_launcher: ^6.3.0
 
 dev_dependencies:
-  dart_code_metrics: ^5.7.6
-  flutter_lints: ^4.0.0
-  linter: ^1.30.1
+  dart_code_linter: ^1.1.5
+  flutter_lints: ^5.0.0
 
 flutter_intl:
   enabled: true
