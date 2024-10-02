@@ -16,38 +16,38 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-    - name: ✅ Checks-out repository
-      uses: actions/checkout@v4.2.0
+      - name: ✅ Checks-out repository
+        uses: actions/checkout@v4.2.0
 
-    - name: 🦋 Install Flutter
-      uses: subosito/flutter-action@v2.16.0
-      with:
-        channel: 'beta'
+      - name: 🦋 Install Flutter
+        uses: subosito/flutter-action@v2.16.0
+        with:
+          channel: "stable"
 
-    - name: 📦 Flutter Get Packages
-      run: flutter pub get
+      - name: 📦 Flutter Get Packages
+        run: flutter pub get
 
-    - name: 🔤 Flutter Generate L10N
-      run: flutter gen-l10n --no-nullable-getter
+      - name: 🔤 Flutter Generate L10N
+        run: flutter gen-l10n --no-nullable-getter
 
-    - name: 🛠️ Build for Web
-      run: flutter build web --release
+      - name: 🛠️ Build for Web
+        run: flutter build web --release
 
-    - name: 💾 Save to deploy
-      run: |
-        rm -rf deploy
-        mkdir deploy
-        cp -avr build/web/* deploy/
-        cp third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf deploy/assets/third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf
-        cp assets/cv/cv_tsinis.pdf deploy/cv_tsinis.pdf
-        cp web/CNAME deploy/CNAME
-        cd deploy
-        rm flutter_service_worker.js
+      - name: 💾 Save to deploy
+        run: |
+          rm -rf deploy
+          mkdir deploy
+          cp -avr build/web/* deploy/
+          cp third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf deploy/assets/third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf
+          cp assets/cv/cv_tsinis.pdf deploy/cv_tsinis.pdf
+          cp web/CNAME deploy/CNAME
+          cd deploy
+          rm flutter_service_worker.js
 
-    - name: 🛫 Deploy
-      uses: s0/git-publish-subdir-action@v2.6.0
-      env:
-        REPO: self
-        BRANCH: gh-pages
-        FOLDER: deploy
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🛫 Deploy
+        uses: s0/git-publish-subdir-action@v2.6.0
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: deploy
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

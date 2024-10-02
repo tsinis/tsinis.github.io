@@ -27,7 +27,7 @@ jobs:
       - name: 🦋 Install Flutter
         uses: subosito/flutter-action@v2.16.0
         with:
-          channel: 'beta'
+          channel: "stable"
 
       - name: 📦 Flutter Get Packages
         run: flutter pub get
@@ -51,15 +51,15 @@ jobs:
         run: dart run dart_code_metrics:metrics --disable-sunset-warning --fatal-style --fatal-performance --fatal-warnings --reporter=github lib
 
   auto-merge-dependabot:
-      name: 🤖 Auto merge dependabot PR
-      timeout-minutes: 10
-      needs: analyze
-      if: ${{ github.actor == 'dependabot[bot]' }}
-      runs-on: ubuntu-latest
-      permissions:
-        pull-requests: write
-        contents: write
-      steps:
+    name: 🤖 Auto merge dependabot PR
+    timeout-minutes: 10
+    needs: analyze
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
       - name: 🤖 Merge PR from dependabot
         uses: fastify/github-action-merge-dependabot@v3.10.2
         with:
