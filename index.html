@@ -1,68 +1,84 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <base href="/" />
   <meta charset="UTF-8" />
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-  <meta name="description" content="Personal website of Roman Cinis." />
-  <meta name="keywords"
-    content="Roman Cinis, Roman Tsinis, Cinis Roman, Tsinis Roman, Tsinis, Cinis, Роман Цинис, Цинис Роман, Цинис" />
-  <!-- CSS Style -->
-  <style>
-    html,
-    body {
-      background-color: #bdbdbd;
-    }
-
-    /* Fade Out Animation */
-    .loader {
-      animation-name: load;
-      animation-duration: 3s;
-    }
-
-    @keyframes load {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-      }
-    }
-
-    /* Loader Look */
-    .loading {
-      opacity: 0.1;
-      width: 60%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      image-rendering: optimizeSpeed;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: -o-crisp-edges;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: pixelated;
-      image-rendering: optimize-contrast;
-      -ms-interpolation-mode: nearest-neighbor;
-    }
-
-    flt-glass-pane {
-      image-rendering: pixelated;
-    }
-  </style>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Roman Cinis</title>
-  <meta name="theme-color" content="#bdbdbd">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="AI first Dart and Rust developer" />
 </head>
-
 <body>
-  <div class="loader">
-    <img src="assets/assets/images/header.gif" alt="Loading..." class="loading" />
-  </div>
-  <script src="main.dart.js" type="application/javascript"></script>
-</body>
+  <main class="hero">
+    <div class="hero-inner">
+      <div class="content-wrapper">
+        <h1>Roman Cinis</h1>
+        <p class="subtitle">AI-first Dart and Rust developer</p>
+        
+        <!-- Social Icons (2 rows of 4) -->
+        <div class="social-links">
+          <div class="tooltip-container">
+            <a href="https://github.com/tsinis" target="_blank" rel="noopener noreferrer" class="btn-social github" aria-label="GitHub">
+              <span class="icon icon-github"></span>
+            </a>
+            <span class="tooltip-text">GitHub</span>
+          </div>
+          <div class="tooltip-container">
+            <a href="https://linkedin.com/in/tsinis" target="_blank" rel="noopener noreferrer" class="btn-social linkedin" aria-label="LinkedIn">
+              <span class="icon icon-linkedin"></span>
+            </a>
+            <span class="tooltip-text">LinkedIn</span>
+          </div>
+          <div class="tooltip-container">
+            <a href="https://dribbble.com/tsinis" target="_blank" rel="noopener noreferrer" class="btn-social dribbble" aria-label="Dribbble">
+              <span class="icon icon-dribbble"></span>
+            </a>
+            <span class="tooltip-text">Dribbble</span>
+          </div>
+          <div class="tooltip-container">
+            <a href="https://medium.com/@tsinis" target="_blank" rel="noopener noreferrer" class="btn-social medium" aria-label="Medium">
+              <span class="icon icon-medium"></span>
+            </a>
+            <span class="tooltip-text">Medium</span>
+          </div>
+          <div class="tooltip-container">
+            <a href="https://vimeo.com/tsinis" target="_blank" rel="noopener noreferrer" class="btn-social vimeo" aria-label="Vimeo">
+              <span class="icon icon-vimeo"></span>
+            </a>
+            <span class="tooltip-text">Vimeo</span>
+          </div>
+          <div class="tooltip-container">
+            <a href="https://youtube.com/@tsinis" target="_blank" rel="noopener noreferrer" class="btn-social youtube" aria-label="YouTube">
+              <span class="icon icon-youtube"></span>
+            </a>
+            <span class="tooltip-text">YouTube</span>
+          </div>
+          <div class="tooltip-container">
+            <a href="https://t.me/tsinis" target="_blank" rel="noopener noreferrer" class="btn-social telegram" aria-label="Telegram">
+              <span class="icon icon-telegram"></span>
+            </a>
+            <span class="tooltip-text">Telegram</span>
+          </div>
+          <div class="tooltip-container">
+            <!-- Email is now purely a UI element to trigger the tooltip -->
+            <div class="btn-social mail" tabindex="0" aria-label="Email">
+              <span class="icon icon-mail"></span>
+            </div>
+            <span class="tooltip-text">tsinis.job [at] gmail.com</span>
+          </div>
+        </div>
+      </div>
 
+      <!-- Rive Canvas Container -->
+      <div class="canvas-container">
+        <canvas id="rive-canvas" aria-label="Interactive Avatar of Roman Cinis" width="1000" height="1000"></canvas>
+        <div id="canvas-fallback" class="fallback-text">Loading Avatar...</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rive Web Runtime -->
+  <script src="https://unpkg.com/@rive-app/webgl2"></script>
+  <script src="script.js"></script>
+</body>
 </html>
