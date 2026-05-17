@@ -2,11 +2,6 @@ name: Deploy
 
 on:
   push:
-    paths:
-      - "lib/**"
-      - "pubspec.yaml"
-      - "pubspec.lock"
-      - ".github/workflows/deploy.yaml"
     branches:
       - master
 
@@ -17,37 +12,21 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: ✅ Checks-out repository
-        uses: actions/checkout@v4.2.2
-
-      - name: 🦋 Install Flutter
-        uses: subosito/flutter-action@v2.16.0
-        with:
-          channel: "stable"
-
-      - name: 📦 Flutter Get Packages
-        run: flutter pub get
-
-      - name: 🔤 Flutter Generate L10N
-        run: flutter gen-l10n --no-nullable-getter
-
-      - name: 🛠️ Build for Web
-        run: flutter build web --release
+        uses: actions/checkout@v6.0.2
 
       - name: 💾 Save to deploy
         run: |
-          rm -rf deploy
-          mkdir deploy
-          cp -avr build/web/* deploy/
-          cp third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf deploy/assets/third-party/fonts/Hagrid/Hagrid-Family-CC-BY-NCLicensepdf.pdf
-          cp assets/cv/cv_tsinis.pdf deploy/cv_tsinis.pdf
-          cp web/CNAME deploy/CNAME
-          cd deploy
-          rm flutter_service_worker.js
+          mkdir -p deploy
+          cp -R assets deploy/ 2>/dev/null || true
+          cp index.html deploy/ 2>/dev/null || true
+          cp style.css deploy/ 2>/dev/null || true
+          cp script.js deploy/ 2>/dev/null || true
+          cp favicon.png deploy/ 2>/dev/null || true
+          cp CNAME deploy/ 2>/dev/null || true
+          cp LICENSE deploy/ 2>/dev/null || true
 
       - name: 🛫 Deploy
-        uses: s0/git-publish-subdir-action@v2.6.0
-        env:
-          REPO: self
-          BRANCH: gh-pages
-          FOLDER: deploy
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
